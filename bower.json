@@ -1,6 +1,6 @@
 {
   "name": "arkount",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Safe array element count.",
   "main": "arkount.deploy.js",
   "support": "arkount.support.js",
@@ -24,9 +24,9 @@
     "tests"
   ],
   "dependencies": {
-    "doubt": "^0.19.0",
-    "raze": "^0.20.0",
-    "truly": "^0.14.0",
-    "wichevr": "^0.2.0"
+    "doubt": "^0.20.0",
+    "raze": "^0.21.0",
+    "truly": "^0.15.0",
+    "wichevr": "^0.3.0"
   }
 }
