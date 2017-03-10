@@ -1,11 +1,12 @@
 {
   "name": "arkount",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Safe array element count.",
   "main": "arkount.deploy.js",
   "support": "arkount.support.js",
   "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -24,9 +25,9 @@
     "tests"
   ],
   "dependencies": {
-    "doubt": "^0.20.0",
-    "raze": "^0.21.0",
+    "doubt": "^0.21.0",
+    "raze": "^0.22.0",
     "truly": "^0.15.0",
-    "wichevr": "^0.3.0"
+    "wichevr": "^0.4.0"
   }
 }
