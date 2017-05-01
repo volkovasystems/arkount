@@ -1,9 +1,11 @@
-
+const assert = require( "assert" );
 const arkount = require( "./arkount.js" );
 
-console.log( arkount( ) );
-console.log( arkount( [ ] ) );
+assert.equal( arkount( ), 0 );
+assert.equal( arkount( [ ] ), 0 );
 
 var array = [ ];
 array[ 1000 ] = 10;
-console.log( arkount( array ) );
+assert.equal( arkount( array ), 1 );
+
+console.log( "ok" );
