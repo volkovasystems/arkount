@@ -1,9 +1,7 @@
 yarn add \
 babel-runtime \
-doubt \
 raze \
 truly \
-wichevr \
 --save && \
 yarn add \
 babel-cli \
@@ -14,9 +12,7 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-doubt \
 raze \
 truly \
-wichevr \
 --save \
 --force-latest

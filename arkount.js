@@ -51,18 +51,14 @@
 
 	@include:
 		{
-			"doubt": "doubt",
 			"raze": "raze",
-			"truly": "truly",
-			"wichevr": "wichevr"
+			"truly": "truly"
 		}
 	@end-include
 */
 
-const doubt = require( "doubt" );
 const raze = require( "raze" );
 const truly = require( "truly" );
-const wichevr = require( "wichevr" );
 
 const arkount = function arkount( array ){
 	/*;
@@ -73,11 +69,7 @@ const arkount = function arkount( array ){
 		@end-meta-configuration
 	*/
 
-	if( !doubt( array, AS_ARRAY ) ){
-		return 0;
-	}
-
-	return wichevr( raze( array ).filter( truly ).length, 0 );
+	return raze( array ).filter( truly ).length || 0;
 };
 
 module.exports = arkount;
