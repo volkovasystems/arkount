@@ -21,6 +21,4 @@ assert.equal( arkount( ), 0, "should return 0" );
 
 assert.equal( arkount( [ ] ), 0, "should return 0" );
 
-assert.equal( arkount( { } ), 0, "should return 0" );
-
 console.log( "ok" );
