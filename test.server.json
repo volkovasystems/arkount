@@ -1,17 +1,116 @@
-ok
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 8,
+    "tests": 7,
+    "passes": 7,
     "pending": 0,
     "failures": 0,
-    "start": "2017-07-29T20:48:35.683Z",
-    "end": "2017-07-29T20:48:35.683Z",
-    "duration": 1
+    "start": "2017-07-30T09:24:58.624Z",
+    "end": "2017-07-30T09:24:58.632Z",
+    "duration": 8
   },
-  "tests": [],
+  "tests": [
+    {
+      "title": "should return 3",
+      "fullTitle": "arkount `arkount( [ 1, 2, 3 ] )` should return 3",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 2",
+      "fullTitle": "arkount `arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )` should return 2",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 1",
+      "fullTitle": "arkount arkount( array ) should return 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 2",
+      "fullTitle": "arkount arkount( [ { hello: world, name: simple } should return 2",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 1",
+      "fullTitle": "arkount arkount( [ data ] ) should return 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 0",
+      "fullTitle": "arkount arkount( ) should return 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 0",
+      "fullTitle": "arkount arkount( [ ] ) should return 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
   "pending": [],
   "failures": [],
-  "passes": []
+  "passes": [
+    {
+      "title": "should return 3",
+      "fullTitle": "arkount `arkount( [ 1, 2, 3 ] )` should return 3",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 2",
+      "fullTitle": "arkount `arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )` should return 2",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 1",
+      "fullTitle": "arkount arkount( array ) should return 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 2",
+      "fullTitle": "arkount arkount( [ { hello: world, name: simple } should return 2",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 1",
+      "fullTitle": "arkount arkount( [ data ] ) should return 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 0",
+      "fullTitle": "arkount arkount( ) should return 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should return 0",
+      "fullTitle": "arkount arkount( [ ] ) should return 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
 }
