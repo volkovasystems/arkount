@@ -291,7 +291,7 @@ describe( "raze", ( ) => {
 	} );
 
 
-	describe( "arkount( { [ Symbol( 'hello' ) ]: 12345 } )", ( ) => {
+	describe( "`arkount( { [ Symbol( 'hello' ) ]: 12345 } )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -308,7 +308,7 @@ describe( "raze", ( ) => {
 	} );
 
 
-	describe( "arkount( )", ( ) => {
+	describe( "`arkount( )`", ( ) => {
 		it( "should be equal to 0" , ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
@@ -326,7 +326,7 @@ describe( "raze", ( ) => {
 	} );
 
 
-	describe( "arkount( [ ] )", ( ) => {
+	describe( "`arkount( [ ] )`", ( ) => {
 		it( "should be equal to 0", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
