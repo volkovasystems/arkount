@@ -71,9 +71,9 @@ const path = require( "path" );
 
 //: @server:
 describe( "arkount", ( ) => {
-	
+
 	describe( "`arkount( [ 1, 2, 3 ] )`", ( ) => {
-		it( "should return 3", ( ) => {
+		it( "should be equal to 3", ( ) => {
 
 			assert.equal( arkount( [ 1, 2, 3 ] ), 3 );
 
@@ -81,7 +81,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "`arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )`", ( ) => {
-	it( "should return 2", ( ) => {
+	it( "should be equal to 2", ( ) => {
 
 			assert.equal( arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] ), 2 );
 
@@ -89,7 +89,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( array )", ( ) => {
-	it( "should return 1", ( ) => {
+	it( "should be equal to 1", ( ) => {
 
 			let array = [ ];
 			array[ 1000 ] = 10;
@@ -100,7 +100,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( [ { hello: world, name: simple }", ( ) => {
-	it( "should return 2", ( ) => {
+	it( "should be equal to 2", ( ) => {
 
 			assert.equal( arkount( [ { "hello": "world", "name": "simple" },
 				{ "option": { "merchant": "biyaheroes" } } ] ),
@@ -110,7 +110,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( [ data ] )", ( ) => {
-	it( "should return 1", ( ) => {
+	it( "should be equal to 1", ( ) => {
 
 			let data = { };
 			data[ Symbol( "hello" ) ] = 12345;
@@ -120,7 +120,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( )", ( ) => {
-	it( "should return 0" , ( ) => {
+	it( "should be equal to 0" , ( ) => {
 
 			assert.equal( arkount( ), 0);
 
@@ -128,7 +128,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( [ ] )", ( ) => {
-	it( "should return 0", ( ) => {
+	it( "should be equal to 0", ( ) => {
 
 			assert.equal( arkount( [ ] ), 0 );
 
@@ -142,11 +142,11 @@ describe( "arkount", ( ) => {
 //: @end-server
 
 
-//: @client: 
+//: @client:
 describe( "arkount", ( ) => {
-	
+
 	describe( "`arkount( [ 1, 2, 3 ] )`", ( ) => {
-		it( "should return 3", ( ) => {
+		it( "should be equal to 3", ( ) => {
 
 			assert.equal( arkount( [ 1, 2, 3 ] ), 3 );
 
@@ -154,7 +154,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "`arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )`", ( ) => {
-	it( "should return 2", ( ) => {
+	it( "should be equal to 2", ( ) => {
 
 			assert.equal( arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] ), 2 );
 
@@ -162,7 +162,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( array )", ( ) => {
-	it( "should return 1", ( ) => {
+	it( "should be equal to 1", ( ) => {
 
 			let array = [ ];
 			array[ 1000 ] = 10;
@@ -173,7 +173,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( [ { hello: world, name: simple }", ( ) => {
-	it( "should return 2", ( ) => {
+	it( "should be equal to 2", ( ) => {
 
 			assert.equal( arkount( [ { "hello": "world", "name": "simple" },
 				{ "option": { "merchant": "biyaheroes" } } ] ),
@@ -183,7 +183,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( [ data ] )", ( ) => {
-	it( "should return 1", ( ) => {
+	it( "should be equal to 1", ( ) => {
 
 			let data = { };
 			data[ Symbol( "hello" ) ] = 12345;
@@ -193,7 +193,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( )", ( ) => {
-	it( "should return 0" , ( ) => {
+	it( "should be equal to 0" , ( ) => {
 
 			assert.equal( arkount( ), 0);
 
@@ -201,7 +201,7 @@ describe( "arkount", ( ) => {
 	} );
 
 	describe( "arkount( [ ] )", ( ) => {
-	it( "should return 0", ( ) => {
+	it( "should be equal to 0", ( ) => {
 
 			assert.equal( arkount( [ ] ), 0 );
 
@@ -219,77 +219,128 @@ describe( "arkount", ( ) => {
 
 describe( "raze", ( ) => {
 
-	
-	let directory = __dirname;
-	let testBridge = path.resolve( directory, "bridge.html" );
-	let bridgeURL = `file://${ testBridge }`;
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	
 	describe( "`arkount( [ 1, 2, 3 ] )`", ( ) => {
-		it( "should return 3", ( ) => {
+		it( "should be equal to 3", ( ) => {
 
-			assert.equal( result.value, 3 );
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return arkount( [ 1, 2, 3 ] );
+				}
+
+			).value;
+
+			assert.equal( result, 3 );
 
 		} );
 	} );
+
 
 	describe( "`arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )`", ( ) => {
-	it( "should return 2", ( ) => {
+		it( "should be equal to 2", ( ) => {
 
-			assert.equal( result.value, 2 );
+			let result = browser.url( bridgeURL ).execute(
 
-		} );
-	} );
+				function( ){
+					return arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] );
+				}
 
-	describe( "arkount( array )", ( ) => {
-	it( "should return 1", ( ) => {
+			).value;
 
-			let array = [ ];
-			array[ 1000 ] = 10;
-			assert.equal( result.value, 1 );
-
+			assert.equal( result, 2 );
 
 		} );
 	} );
 
-	describe( "arkount( [ { hello: world, name: simple }", ( ) => {
-	it( "should return 2", ( ) => {
 
-			assert.equal( result.value,
-				2);
+	describe( "`arkount( array )`", ( ) => {
+		it( "should be equal to 1", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let array = [ ];
+					array[ 1000 ] = 10;
+					return arkount( array );
+				}
+
+			).value;
+
+			assert.equal( result, 1 );
 
 		} );
 	} );
 
-	describe( "arkount( [ data ] )", ( ) => {
-	it( "should return 1", ( ) => {
 
-			let data = { };
-			data[ Symbol( "hello" ) ] = 12345;
-			assert.equal( result.value, 1 );
+	describe( "`arkount( [ { 'hello': 'world' }, { 'name': 'simple' } ] )`", ( ) => {
+		it( "should be equal to 2", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return arkount( [ { "hello": "world" }, { "name": "simple" } ] );
+				}
+
+			).value;
+
+			assert.equal( result, 2 );
 
 		} );
 	} );
+
+
+	describe( "arkount( { [ Symbol( 'hello' ) ]: 12345 } )", ( ) => {
+		it( "should be equal to 1", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return arkount( { [ Symbol( 'hello' ) ]: 12345 } );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, 1 );
+
+		} );
+	} );
+
 
 	describe( "arkount( )", ( ) => {
-	it( "should return 0" , ( ) => {
+		it( "should be equal to 0" , ( ) => {
 
-			assert.equal( result.value, 0);
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return arkount( );
+				}
+
+			).value;
+
+
+			assert.equal( result, 0 );
 
 		} );
 	} );
 
-	describe( "arkount( [ ] )", ( ) => {
-	it( "should return 0", ( ) => {
 
-			assert.equal( result.value, 0 );
+	describe( "arkount( [ ] )", ( ) => {
+		it( "should be equal to 0", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return arkount( [ ] );
+				}
+
+			).value;
+			assert.equal( result, 0 );
 
 		} );
 	} );
 
 } );
 
-
 //: @end-bridge
-
-
