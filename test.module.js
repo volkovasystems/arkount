@@ -297,7 +297,7 @@ describe( "raze", ( ) => {
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
-					return arkount( { [ Symbol( 'hello' ) ]: 12345 } );
+					return arkount( { [ Symbol( "hello" ) ]: 12345 } );
 				}
 
 			).value;
@@ -318,7 +318,6 @@ describe( "raze", ( ) => {
 				}
 
 			).value;
-
 
 			assert.equal( result, 0 );
 
