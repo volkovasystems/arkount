@@ -5,57 +5,57 @@
     "passes": 7,
     "pending": 0,
     "failures": 0,
-    "start": "2017-07-30T09:24:58.624Z",
-    "end": "2017-07-30T09:24:58.632Z",
-    "duration": 8
+    "start": "2017-08-05T10:57:35.620Z",
+    "end": "2017-08-05T10:57:35.627Z",
+    "duration": 7
   },
   "tests": [
     {
-      "title": "should return 3",
-      "fullTitle": "arkount `arkount( [ 1, 2, 3 ] )` should return 3",
+      "title": "should be equal to 3",
+      "fullTitle": "arkount `arkount( [ 1, 2, 3 ] )` should be equal to 3",
       "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 2",
-      "fullTitle": "arkount `arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )` should return 2",
+      "title": "should be equal to 2",
+      "fullTitle": "arkount `arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )` should be equal to 2",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 1",
-      "fullTitle": "arkount arkount( array ) should return 1",
+      "title": "should be equal to 1",
+      "fullTitle": "arkount `arkount( array )` should be equal to 1",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should be equal to 2",
+      "fullTitle": "arkount `arkount( [ { 'hello': 'world' }, { 'name': 'simple' } ] )` should be equal to 2",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 2",
-      "fullTitle": "arkount arkount( [ { hello: world, name: simple } should return 2",
+      "title": "should be equal to 1",
+      "fullTitle": "arkount `arkount( { [ Symbol( 'hello' ) ]: 12345 } )` should be equal to 1",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 1",
-      "fullTitle": "arkount arkount( [ data ] ) should return 1",
+      "title": "should be equal to 0",
+      "fullTitle": "arkount `arkount( )` should be equal to 0",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 0",
-      "fullTitle": "arkount arkount( ) should return 0",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return 0",
-      "fullTitle": "arkount arkount( [ ] ) should return 0",
-      "duration": 0,
+      "title": "should be equal to 0",
+      "fullTitle": "arkount `arkount( [ ] )` should be equal to 0",
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     }
@@ -64,51 +64,51 @@
   "failures": [],
   "passes": [
     {
-      "title": "should return 3",
-      "fullTitle": "arkount `arkount( [ 1, 2, 3 ] )` should return 3",
+      "title": "should be equal to 3",
+      "fullTitle": "arkount `arkount( [ 1, 2, 3 ] )` should be equal to 3",
       "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 2",
-      "fullTitle": "arkount `arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )` should return 2",
+      "title": "should be equal to 2",
+      "fullTitle": "arkount `arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )` should be equal to 2",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 1",
-      "fullTitle": "arkount arkount( array ) should return 1",
+      "title": "should be equal to 1",
+      "fullTitle": "arkount `arkount( array )` should be equal to 1",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should be equal to 2",
+      "fullTitle": "arkount `arkount( [ { 'hello': 'world' }, { 'name': 'simple' } ] )` should be equal to 2",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 2",
-      "fullTitle": "arkount arkount( [ { hello: world, name: simple } should return 2",
+      "title": "should be equal to 1",
+      "fullTitle": "arkount `arkount( { [ Symbol( 'hello' ) ]: 12345 } )` should be equal to 1",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 1",
-      "fullTitle": "arkount arkount( [ data ] ) should return 1",
+      "title": "should be equal to 0",
+      "fullTitle": "arkount `arkount( )` should be equal to 0",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should return 0",
-      "fullTitle": "arkount arkount( ) should return 0",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return 0",
-      "fullTitle": "arkount arkount( [ ] ) should return 0",
-      "duration": 0,
+      "title": "should be equal to 0",
+      "fullTitle": "arkount `arkount( [ ] )` should be equal to 0",
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     }

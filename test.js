@@ -55,7 +55,7 @@
 	@end-include
 */
 
-const assert = require( "assert" );
+const assert = require( "should" );
 
 //: @server:
 const arkount = require( "./arkount.js" );
@@ -67,25 +67,27 @@ const arkount = require( "./arkount.js" );
 
 //: @server:
 describe( "arkount", ( ) => {
-	
+
 	describe( "`arkount( [ 1, 2, 3 ] )`", ( ) => {
-		it( "should return 3", ( ) => {
+		it( "should be equal to 3", ( ) => {
 
 			assert.equal( arkount( [ 1, 2, 3 ] ), 3 );
 
 		} );
 	} );
 
+
 	describe( "`arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] )`", ( ) => {
-	it( "should return 2", ( ) => {
+		it( "should be equal to 2", ( ) => {
 
 			assert.equal( arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] ), 2 );
 
 		} );
 	} );
 
-	describe( "arkount( array )", ( ) => {
-	it( "should return 1", ( ) => {
+
+	describe( "`arkount( array )`", ( ) => {
+		it( "should be equal to 1", ( ) => {
 
 			let array = [ ];
 			array[ 1000 ] = 10;
@@ -95,8 +97,9 @@ describe( "arkount", ( ) => {
 		} );
 	} );
 
-	describe( "arkount( [ { hello: world, name: simple }", ( ) => {
-	it( "should return 2", ( ) => {
+
+	describe( "`arkount( [ { 'hello': 'world' }, { 'name': 'simple' } ] )`", ( ) => {
+		it( "should be equal to 2", ( ) => {
 
 			assert.equal( arkount( [ { "hello": "world", "name": "simple" },
 				{ "option": { "merchant": "biyaheroes" } } ] ),
@@ -105,8 +108,9 @@ describe( "arkount", ( ) => {
 		} );
 	} );
 
-	describe( "arkount( [ data ] )", ( ) => {
-	it( "should return 1", ( ) => {
+
+	describe( "`arkount( { [ Symbol( 'hello' ) ]: 12345 } )`", ( ) => {
+		it( "should be equal to 1", ( ) => {
 
 			let data = { };
 			data[ Symbol( "hello" ) ] = 12345;
@@ -115,23 +119,23 @@ describe( "arkount", ( ) => {
 		} );
 	} );
 
-	describe( "arkount( )", ( ) => {
-	it( "should return 0" , ( ) => {
+
+	describe( "`arkount( )`", ( ) => {
+		it( "should be equal to 0" , ( ) => {
 
 			assert.equal( arkount( ), 0);
 
 		} );
 	} );
 
-	describe( "arkount( [ ] )", ( ) => {
-	it( "should return 0", ( ) => {
+
+	describe( "`arkount( [ ] )`", ( ) => {
+		it( "should be equal to 0", ( ) => {
 
 			assert.equal( arkount( [ ] ), 0 );
 
 		} );
 	} );
-
-
 } );
 
 
@@ -142,35 +146,3 @@ describe( "arkount", ( ) => {
 
 
 
-
-
-
-
-
-
-
-
-// const assert = require( "assert" );
-// const arkount = require( "./arkount.js" );
-
-// assert.equal( arkount( [ 1, 2, 3 ] ), 3, "should return 3" );
-
-// assert.equal( arkount( [ [ 1, 2, 3 ], [ 4, 5, 6 ] ] ), 2, "should return 2" );
-
-// let array = [ ];
-// array[ 1000 ] = 10;
-// assert.equal( arkount( array ), 1, "should return 1" );
-
-// assert.equal( arkount( [ { "hello": "world", "name": "simple" },
-// 				{ "option": { "merchant": "biyaheroes" } } ] ),
-// 				2, "should return 2" );
-
-// let data = { };
-// data[ Symbol( "hello" ) ] = 12345;
-// assert.equal( arkount( [ data ] ), 1, "should return 1" );
-
-// assert.equal( arkount( ), 0, "should return 0" );
-
-// assert.equal( arkount( [ ] ), 0, "should return 0" );
-
-// console.log( "ok" );
