@@ -7,7 +7,7 @@ yarn add \
 babel-cli \
 babel-core \
 babel-plugin-transform-runtime \
-babel-preset-latest \
+babel-preset-env \
 electron \
 gulp \
 gulp-babel \

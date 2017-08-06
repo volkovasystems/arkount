@@ -98,15 +98,16 @@ describe( "arkount", ( ) => {
 	describe( "`arkount( [ { 'hello': 'world' }, { 'name': 'simple' } ] )`", ( ) => {
 		it( "should be equal to 2", ( ) => {
 
-			assert.equal( arkount( [ { "hello": "world", "name": "simple" },
-				{ "option": { "merchant": "biyaheroes" } } ] ),
-				2);
+			assert.equal( arkount( [ {
+				 "hello": "world", "name": "simple" },
+				{ "option": { "merchant": "biyaheroes" } }
+			] ), 2 );
 
 		} );
 	} );
 
 
-	describe( "`arkount( { [ Symbol( 'hello' ) ]: 12345 } )`", ( ) => {
+	describe( "`arkount( [ { [ Symbol( 'hello' ) ]: 12345 } ] )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 
 			let data = { };
@@ -120,7 +121,7 @@ describe( "arkount", ( ) => {
 	describe( "`arkount( )`", ( ) => {
 		it( "should be equal to 0" , ( ) => {
 
-			assert.equal( arkount( ), 0);
+			assert.equal( arkount( ), 0 );
 
 		} );
 	} );

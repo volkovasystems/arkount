@@ -5,9 +5,9 @@
 		"passes": 7,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-06T03:21:29.319Z",
-		"end": "2017-08-06T03:21:29.324Z",
-		"duration": 5
+		"start": "2017-08-06T05:39:27.872Z",
+		"end": "2017-08-06T05:39:27.881Z",
+		"duration": 9
 	},
 	"tests": [
 		{
@@ -34,13 +34,13 @@
 		{
 			"title": "should be equal to 2",
 			"fullTitle": "arkount `arkount( [ { 'hello': 'world' }, { 'name': 'simple' } ] )` should be equal to 2",
-			"duration": 0,
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
 			"title": "should be equal to 1",
-			"fullTitle": "arkount `arkount( { [ Symbol( 'hello' ) ]: 12345 } )` should be equal to 1",
+			"fullTitle": "arkount `arkount( [ { [ Symbol( 'hello' ) ]: 12345 } ] )` should be equal to 1",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
@@ -87,13 +87,13 @@
 		{
 			"title": "should be equal to 2",
 			"fullTitle": "arkount `arkount( [ { 'hello': 'world' }, { 'name': 'simple' } ] )` should be equal to 2",
-			"duration": 0,
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
 			"title": "should be equal to 1",
-			"fullTitle": "arkount `arkount( { [ Symbol( 'hello' ) ]: 12345 } )` should be equal to 1",
+			"fullTitle": "arkount `arkount( [ { [ Symbol( 'hello' ) ]: 12345 } ] )` should be equal to 1",
 			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
