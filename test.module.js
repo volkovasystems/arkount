@@ -90,13 +90,10 @@ describe( "arkount", ( ) => {
 	} );
 
 
-	describe( "`arkount( array )`", ( ) => {
+	describe( "`arkount( [ undefined, undefined, 10 ] )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 
-			let array = [ ];
-			array[ 1000 ] = 10;
-			assert.equal( arkount( array ), 1 );
-
+			assert.equal( arkount( [ undefined, undefined, 10 ] ), 1 );
 
 		} );
 	} );
@@ -167,13 +164,10 @@ describe( "arkount", ( ) => {
 	} );
 
 
-	describe( "`arkount( array )`", ( ) => {
+	describe( "`arkount( [ undefined, undefined, 10 ] )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 
-			let array = [ ];
-			array[ 1000 ] = 10;
-			assert.equal( arkount( array ), 1 );
-
+			assert.equal( arkount( [ undefined, undefined, 10 ] ), 1 );
 
 		} );
 	} );
@@ -264,15 +258,13 @@ describe( "raze", ( ) => {
 	} );
 
 
-	describe( "`arkount( array )`", ( ) => {
+	describe( "`arkount( [ undefined, undefined, 10 ] )`", ( ) => {
 		it( "should be equal to 1", ( ) => {
 
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
-					let array = [ ];
-					array[ 1000 ] = 10;
-					return arkount( array );
+					return arkount( [ undefined, undefined, 10 ] );
 				}
 
 			).value;
